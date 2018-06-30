@@ -2,6 +2,7 @@
 #include <sys/epoll.h>
 #include <arpa/inet.h>
 #include <fcntl.h>
+#include <unistd.h>
 #include <errno.h>
 #include <string.h> //for bzero
 #include <iostream>
@@ -35,7 +36,7 @@ int createAndListen()
     return listenfd;
 }
 
-int main(int args, char** argv)
+int main(int argc, char** argv)
 {
     struct epoll_event ev, events[MAX_EVENTS];
     int listenfd,connfd,sockfd;
