@@ -2,7 +2,7 @@
 #ifndef CHANNEL_H
 #define CHANNEL_H
 
-#include "Declear.h"
+#include "Declare.h"
 
 class Channel
 {
