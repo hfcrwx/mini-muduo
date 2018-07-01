@@ -3,6 +3,7 @@
 #include <sys/epoll.h>
 #include <arpa/inet.h>
 #include <fcntl.h>
+#include <unistd.h>
 #include <errno.h>
 #include <string.h> //for bzero
 #include <iostream>

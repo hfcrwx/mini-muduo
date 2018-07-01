@@ -1,6 +1,6 @@
 #include "TcpServer.h"
 
-int main(int args, char** argv)
+int main(int argc, char** argv)
 {
     TcpServer tcpserver;
     tcpserver.start();
