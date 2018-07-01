@@ -2,7 +2,7 @@
 #ifndef TCPCONNECTION_H
 #define TCPCONNECTION_H
 
-#include "Declear.h"
+#include "Declare.h"
 #include "IChannelCallBack.h"
 
 class TcpConnection : public IChannelCallBack

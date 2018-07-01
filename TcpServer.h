@@ -4,7 +4,7 @@
 
 #include <sys/epoll.h>
 
-#include "Declear.h"
+#include "Declare.h"
 #include "Define.h"
 #include "IAcceptorCallBack.h"
 
@@ -20,7 +20,6 @@ class TcpServer : public IAcceptorCallBack
         void start();
         virtual void newConnection(int sockfd);
     private:
-        void update(Channel* pChannel, int op);
 
         int _epollfd;
         struct epoll_event _events[MAX_EVENTS];

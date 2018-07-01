@@ -2,7 +2,7 @@
 #ifndef ACCEPTOR_H
 #define ACCEPTOR_H
 
-#include "Declear.h"
+#include "Declare.h"
 #include "Define.h"
 #include "IChannelCallBack.h"
 
