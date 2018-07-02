@@ -3,7 +3,7 @@
 #include "TcpServer.h"
 #include "EventLoop.h"
 
-int main(int args, char** argv)
+int main(int argc, char** argv)
 {
     EventLoop loop;
     TcpServer tcpserver(&loop);
