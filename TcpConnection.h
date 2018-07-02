@@ -17,7 +17,6 @@ class TcpConnection : public IChannelCallback
         void connectEstablished();
         void setUser(IMuduoUser* pUser);
 
-        void setCallback(IAcceptorCallback* pCallback);
         void virtual onIn(int sockfd);
     private:
         int _sockfd;
