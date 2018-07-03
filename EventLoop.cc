@@ -1,6 +1,7 @@
 //author voidccc
 
 #include <sys/eventfd.h>
+#include <unistd.h>
 
 #include "EventLoop.h"
 #include "Channel.h"
