@@ -21,7 +21,6 @@ class TcpServer : public IAcceptorCallback
         void setCallback(IMuduoUser* pUser);
         virtual void newConnection(int sockfd);
     private:
-        struct epoll_event _events[MAX_EVENTS];
         map<int, TcpConnection*> _connections;
         Acceptor* _pAcceptor;
         EventLoop* _pLoop;

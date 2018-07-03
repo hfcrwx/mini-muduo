@@ -17,7 +17,6 @@ class TcpConnection : public IChannelCallback
         void connectEstablished();
         void setUser(IMuduoUser* pUser);
 
-        void setCallback(IAcceptorCallback* pCallback);
         void virtual handleRead();
         void virtual handleWrite();
     private:

@@ -4,6 +4,7 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 #include "TcpConnection.h"
 #include "Channel.h"
@@ -92,7 +93,7 @@ void TcpConnection::send(const string& message)
     if( n < static_cast<int>(message.size()))
     {
         *_outBuf += message.substr(n, message.size());
-        if(_pChannel->isWriting())
+        if(!_pChannel->isWriting())
         {
             //add EPOLLOUT
             _pChannel->enableWriting();
