@@ -4,7 +4,7 @@
 #include "EventLoop.h"
 #include "EchoServer.h"
 
-int main(int args, char** argv)
+int main(int argc, char** argv)
 {
     EventLoop loop;
     EchoServer echoserver(&loop);
