@@ -11,7 +11,7 @@ class IMuduoUser
     public:
         void virtual onConnection(TcpConnection* pCon) = 0;
         void virtual onMessage(TcpConnection* pCon, Buffer* pBuf) = 0;
-        void virtual onWriteComplate(TcpConnection* pCon) = 0;
+        void virtual onWriteComplete(TcpConnection* pCon) = 0;
 };
 
 #endif

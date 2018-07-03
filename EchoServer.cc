@@ -35,7 +35,7 @@ void EchoServer::onMessage(TcpConnection* pCon, Buffer* pBuf)
         pCon->send(message + "\n");
     }
 }
-void EchoServer::onWriteComplate(TcpConnection* pCon)
+void EchoServer::onWriteComplete(TcpConnection* pCon)
 {
     cout << "onWriteComplate" << endl;
 }
