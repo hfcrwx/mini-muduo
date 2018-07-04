@@ -16,7 +16,7 @@ public:
     void start();
     virtual void onConnection(TcpConnection* pCon);
     virtual void onMessage(TcpConnection* pCon, Buffer* pBuf);
-    virtual void onWriteComplate(TcpConnection* pCon);
+    virtual void onWriteComplete(TcpConnection* pCon);
 
     virtual void run2(const string& str, void* tcp);
 private:

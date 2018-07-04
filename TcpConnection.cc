@@ -4,6 +4,7 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 #include "TcpConnection.h"
 #include "Channel.h"
@@ -75,7 +76,7 @@ void TcpConnection::handleWrite()
             {
                 _pSocketChannel->disableWriting(); //remove EPOLLOUT
                 Task task(this);
-                _pLoop->queueInLoop(task); //invoke onWriteComplate
+                _pLoop->queueInLoop(task); //invoke onWriteComplete
             }
         }
     }
@@ -105,7 +106,7 @@ void TcpConnection::sendInLoop(const string& message)
         if(n == static_cast<int>(message.size()))
         {
             Task task(this);
-            _pLoop->queueInLoop(task); //invoke onWriteComplate
+            _pLoop->queueInLoop(task); //invoke onWriteComplete
         }
     }
 
@@ -132,7 +133,7 @@ void TcpConnection::setUser(IMuduoUser* user)
 
 void TcpConnection::run0()
 {
-    _pUser->onWriteComplate(this);
+    _pUser->onWriteComplete(this);
 }
 
 void TcpConnection::run2(const string& message, void* param)

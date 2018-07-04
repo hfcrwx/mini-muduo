@@ -43,9 +43,9 @@ void EchoServer::onMessage(TcpConnection* pCon, Buffer* pBuf)
     }
 }
 
-void EchoServer::onWriteComplate(TcpConnection* pCon)
+void EchoServer::onWriteComplete(TcpConnection* pCon)
 {
-    cout << "onWriteComplate" << endl;
+    cout << "onWriteComplete" << endl;
 }
 
 //run in different therad
