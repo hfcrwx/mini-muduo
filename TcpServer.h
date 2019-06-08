@@ -19,7 +19,7 @@ class TcpServer : public IAcceptorCallBack
         void start();
         virtual void newConnection(int sockfd);
     private:
-        struct epoll_event _events[MAX_EVENTS];
+//        struct epoll_event _events[MAX_EVENTS];
         map<int, TcpConnection*> _connections;
         Acceptor* _pAcceptor;
         EventLoop* _loop;
